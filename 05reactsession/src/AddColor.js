@@ -20,8 +20,8 @@ const AddColor = () => {
       <button onClick={() => {
         setcolorList([...colorList, color]);
       }}>Add Color</button>
-      {colorList.map((element) => {
-        return <ColorBox color={element} />;
+      {colorList.map((element,index) => {
+        return <ColorBox color={element} key={index}/>;
       })}
     </div>
   );
