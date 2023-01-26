@@ -5,19 +5,21 @@ import Counter from './Counter';
  const Movie = ({ name, poster, summary, rating }) => {
   const myStyle={
     width:"400px",
-    height:"100%",    
+    height:"100%",
+    marginTop:"20px"    
   }
   const [show, setShow] = useState(false);
   const ratingStyle = {
     color: rating > 8 ? "green" : "crimson",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    
   };
 
   return (
 
     <div className="col" style={myStyle}>
-      <div className="card">
-        <img src={poster} className="card-img-top" alt="..." style={{ height: "450px" }} />
+      <div className="card" style={{width:"280px"}}>
+        <img src={poster} className="card-img-top" alt="..." style={{ height: "350px" }} />
         <div>
           <div className="card-body m-0 p-0 d-flex justify-content-around">
             <span className="card-title m-0 p-0"><b>{name}</b></span>
