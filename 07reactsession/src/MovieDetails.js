@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 export const MovieDetails = ({ movieList }) => {
   console.log(useParams());
@@ -43,6 +44,8 @@ export const MovieDetails = ({ movieList }) => {
             navigate(-1);
           }}>🔙
         </span>
+
+        <Button variant="outlined">Outlined</Button>
       </div>
     </>
   );

@@ -10,6 +10,13 @@ export const AddMovie = ({movieList,setMovieList}) => {
   
   return(  
     <>
+
+
+
+
+
+
+    
       <div className="input-group mb-3 container-fluid w-25 mt-2">
         <span className="input-group-text">Movie Name</span>
         <input type="text" className="form-control" value={movieName}

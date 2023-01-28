@@ -11,13 +11,16 @@ import {
 } from "react-router-dom";
 import NotFound from "./NotFound";
 import { MovieDetails } from "./MovieDetails";
+import Muicard from "./Muicard";
 
 function App() {
   const [movieList, setMovieList] = useState(allmovies);
 
   return (
     <div className="App">
+    
       <Navbar />
+      <Muicard/>
       <Routes>
         <Route exact path="/" element={<MovieList movieList={movieList} />} />
         <Route
@@ -37,6 +40,8 @@ function App() {
 
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate replace to="/404" />} />
+
+        
       </Routes>
     </div>
   );
