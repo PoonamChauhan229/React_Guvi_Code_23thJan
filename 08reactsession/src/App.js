@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Navbar";
+import AddColor from "./AddColor";
+import { AddMovie } from "./AddMovie";
+import MovieList from "./MovieList";
+import { useState } from "react";
+import { allmovies } from "./constants";
+import {
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+import NotFound from "./NotFound";
+import { MovieDetails } from "./MovieDetails";
 
 function App() {
+  const [movieList, setMovieList] = useState(allmovies);
+  console.log(movieList)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<MovieList movieList={movieList} />} />
+        <Route
+          exact
+          path="/addmovie"
+          element={
+            <AddMovie movieList={movieList} setMovieList={setMovieList} />
+          }
+        />
+        <Route exact path="/colorgame" element={<AddColor />} />
+        <Route
+          exact
+          path="/addcolor"
+          element={<Navigate replace to="/colorgame" />}
+        />
+        <Route exact path="/movies/:id" element={<MovieDetails  movieList={movieList}/>} />
+
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate replace to="/404" />} />
+
+        
+      </Routes>
     </div>
   );
 }
 
 export default App;
+
