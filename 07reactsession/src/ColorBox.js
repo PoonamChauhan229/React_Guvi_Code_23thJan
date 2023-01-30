@@ -1,8 +1,7 @@
 export const ColorBox = ({ color }) => {
   const ColorBoxStyle = {
     backgroundColor: color,
-    height: "35px",
-    
+    height: "35px",    
     margin: "auto",
     width: "39%",
     padding: "10px",

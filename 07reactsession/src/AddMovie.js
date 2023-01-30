@@ -8,6 +8,7 @@ export const AddMovie = ({ movieList, setMovieList }) => {
   const [poster, setPoster] = useState("");
   const [rating, setRating] = useState("");
   const [summary, setSummary] = useState("");
+  const [trailer, setTrailer] = useState("");
   const Navigate=useNavigate()
   const textStyles = {
     marginBottom: "15px",
@@ -68,13 +69,25 @@ export const AddMovie = ({ movieList, setMovieList }) => {
             setSummary(e.target.value);
           }}
         />
+         </div>
+        <div style={textStyles}>
+        <TextField
+          sx={{ width: "100%" }}
+          id="outlined-basic"
+          label="Trailer URL"
+          variant="outlined"
+          value={trailer}
+          onChange={(e) => {
+            setTrailer(e.target.value);
+          }}
+        />       
       </div>
       <div style={{ margin: "auto", width: "50%",display:"flex" }}>
         <Button
           sx={{ width: "100%", fontSize: "18px" }}
           variant="outlined"
           onClick={() => {
-            const movie = { name: movieName, poster, rating, summary };
+            const movie = { name: movieName, poster, rating, summary,trailer };
             setMovieList([...movieList, movie]);
             console.log(movieList);
           }}

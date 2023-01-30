@@ -1,5 +1,10 @@
 import { useNavigate, useParams } from "react-router-dom";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
+import ListItem from "@mui/material/ListItem";
+import Divider from "@mui/material/Divider";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import IconButton from "@mui/material/IconButton";
+import { ListItemText } from "@mui/material";
 
 export const MovieDetails = ({ movieList }) => {
   console.log(useParams());
@@ -8,44 +13,68 @@ export const MovieDetails = ({ movieList }) => {
   const movie = movieList[id];
   const ratingStyle = {
     color: movie.rating > 8 ? "green" : "crimson",
+    fontSize: "22px",
     fontWeight: "bold",
+    padding: "0px 0px 8px 0px",
   };
   const navigate = useNavigate();
+  const listStyle = {
+    fontSize: "22px",
+    fontWeight: "bold",
+    padding: "0px 0px 8px 0px",
+  };
   return (
     <>
-      {/* id is {id} */}
-      <div className="col">
-        <div className="card">
+      <div>
+        <div>
+          <div
+            style={{
+              padding: "3px",
+              width: "99.1%",
+              marginLeft: "0.2%",
+            }}
+          >
+            <ListItem  style={listStyle} button>
+              {movie.name}<br/>              
+            </ListItem>
+            <div style={ratingStyle}>{movie.rating}⭐⭐</div>
+          </div>
           <iframe
-            width="100%"
-            height="650"
+            width="99.7%"
+            height="500"
             src={movie.trailer}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+            style={{ marginLeft: "0.2%", paddingTop: "0%" }}
           ></iframe>
           <div>
-            <div className="card-body m-0 p-0 d-flex justify-content-around">
-              <span className="card-title m-0 p-0">
-                <b>{movie.name}</b>
-              </span>
-              <span className="m-0 p-0" style={ratingStyle}>
-                ⭐{movie.rating}
-              </span>
+            <div style={{ marginLeft: "0.2%" }}>
+              <ListItem style={listStyle} button>
+                {movie.summary}
+              </ListItem>              
             </div>
-
+            <Divider />
           </div>
         </div>
-        <p className="card-text">{movie.summary}</p>
-        <span
-          style={{ paddingLeft: "10px", fontSize: "50px" }}
+
+        <Button
+          variant="outlined"
+          style={{
+            margin: "5px 10px 5px 10px",
+            padding: "2px 30px 2px 0px",
+            fontSize: "17px",
+          }}
           onClick={() => {
             navigate(-1);
-          }}>🔙
-        </span>
-
-        <Button variant="outlined">Outlined</Button>
+          }}
+        >
+          <IconButton aria-label="delete" size="large">
+            <NavigateBeforeIcon fontSize="inherit" />
+          </IconButton>
+          <b>Back</b>
+        </Button>
       </div>
     </>
   );

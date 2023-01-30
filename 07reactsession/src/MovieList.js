@@ -7,7 +7,7 @@ const MovieList = ({movieList}) => {
     width: "89%",padding: "10px"}}>
       {movieList.map((element,index) => {
         console.log(element)
-        return <Movie {...element} id={index}  movieAvatar={element}/>;
+        return <Movie {...element} id={index} key={index} movieAvatar={element}/>;
         })}
     </div>
   );

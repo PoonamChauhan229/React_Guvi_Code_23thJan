@@ -14,12 +14,12 @@ import { MovieDetails } from "./MovieDetails";
 
 function App() {
   const [movieList, setMovieList] = useState(allmovies);
+  console.log(movieList)
 
   return (
     <div className="App">
     
       <Navbar />
-     
       <Routes>
         <Route exact path="/" element={<MovieList movieList={movieList} />} />
         <Route
