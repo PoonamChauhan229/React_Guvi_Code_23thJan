@@ -11,7 +11,6 @@ import {
 } from "react-router-dom";
 import NotFound from "./NotFound";
 import { MovieDetails } from "./MovieDetails";
-import Muicard from "./Muicard";
 
 function App() {
   const [movieList, setMovieList] = useState(allmovies);
@@ -20,7 +19,7 @@ function App() {
     <div className="App">
     
       <Navbar />
-      <Muicard/>
+     
       <Routes>
         <Route exact path="/" element={<MovieList movieList={movieList} />} />
         <Route

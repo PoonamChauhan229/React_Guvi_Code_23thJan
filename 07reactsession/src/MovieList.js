@@ -1,15 +1,14 @@
 import Movie from './Movie';
-import Muicard from './Muicard';
 
 const MovieList = ({movieList}) => {
   // console.log(movieList)
   return (
-    <div className="d-flex ps-5" style={{flexWrap:"wrap"}}>
+    <div style={{display:"flex",flexWrap:"wrap",margin:"auto",
+    width: "89%",padding: "10px"}}>
       {movieList.map((element,index) => {
-        // return <Movie {...element} id={index} />;
-        return <Muicard {...element} id={index}/>
-
-      })}
+        console.log(element)
+        return <Movie {...element} id={index}  movieAvatar={element}/>;
+        })}
     </div>
   );
 };

@@ -13,7 +13,7 @@ export const MovieDetails = ({ movieList }) => {
   const navigate = useNavigate();
   return (
     <>
-      id is {id}
+      {/* id is {id} */}
       <div className="col">
         <div className="card">
           <iframe
