@@ -13,6 +13,7 @@ import NotFound from "./NotFound";
 import { MovieDetails } from "./MovieDetails";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import TicTacToe from "./TicTacToe";
 
 
 
@@ -50,6 +51,8 @@ function App() {
                 path="/addcolor"
                 element={<Navigate replace to="/colorgame" />}
               />
+
+              <Route exact path="/tictactoe" element={<TicTacToe />} />
               <Route exact path="/movies/:id" element={<MovieDetails  movieList={movieList}/>} />
 
               <Route path="/404" element={<NotFound />} />

@@ -39,6 +39,11 @@ export default function Navbar({mode,setMode}) {
                   Color Game
                 </Button>
 
+                <Button sx={{ color: '#fff' }} onClick={
+                  ()=>{navigate('/tictactoe')}
+                }>TicTacToe Game
+                  </Button>
+
                 <Button 
                 startIcon={mode === 'dark' ? <Brightness4Icon /> : <Brightness7Icon />}
                 
