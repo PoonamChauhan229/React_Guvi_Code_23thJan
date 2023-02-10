@@ -4,7 +4,7 @@ import ListItem from "@mui/material/ListItem";
 import Divider from "@mui/material/Divider";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import IconButton from "@mui/material/IconButton";
-
+import { ListItemText } from "@mui/material";
 import { useEffect, useState } from "react";
 
 export const MovieDetails = () => {
