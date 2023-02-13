@@ -44,6 +44,10 @@ export default function Navbar({mode,setMode}) {
                 }>TicTacToe Game
                   </Button>
 
+                  <Button sx={{ color: '#fff' }} onClick={
+                  ()=>{navigate('/basicform')}
+                }>Formik Basic Form
+                  </Button>
                 <Button 
                 startIcon={mode === 'dark' ? <Brightness4Icon /> : <Brightness7Icon />}
                 

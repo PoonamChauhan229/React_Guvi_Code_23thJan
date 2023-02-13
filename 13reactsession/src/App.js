@@ -15,6 +15,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import TicTacToe from "./TicTacToe";
 import { EditMovie } from "./EditMovie";
+import BasicForm from "./BasicForm";
 
 
 
@@ -40,6 +41,7 @@ function App() {
             <Routes>
               <Route exact path="/" element={<MovieList />} />
               <Route exact path="/addmovie" element={<AddMovie/>}/>
+              <Route exact path="/basicform" element={<BasicForm/>}/>
               <Route exact path="/edit/:id" element={<EditMovie/>}/>
               
               <Route exact path="/colorgame" element={<AddColor />} />
