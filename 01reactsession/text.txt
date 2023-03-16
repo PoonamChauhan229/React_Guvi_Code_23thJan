@@ -14,7 +14,7 @@ React-Facebook=>2012-2013
 What Led to React:
 Developers hungry for tools and they wanted nice1
 they wanted to build large scale applications
-but they didnt had anything in thier hands
+but they didnt had anything in thier hands and no proper tools were available
 
 slide no:1: What led to React?
 Before React What was the state of WEB?
@@ -33,13 +33,15 @@ It was the starting point where almost all people started using cellphones
 at least in India but people were more comfortable using Samsung as it was at affordable price
 
 One more thing happened,which was not previously had never happened
-Internet right? things were making at more affordable  and people were switchingto jio 
+Internet right? things were making at more affordable  and people were switching to jio 
 and more people onboarded because of jio right?
 everyone becoming online which was not previously happened
 
 Before JIO, if you are aware , what was the cost
 how much other network used to provide us/ charge us for 3G?
 28days -1GB right
+
+Slide No 2:
 
 Before Vs After:
 Something 353 for 28 days something at that time i used to put in cellphones
@@ -69,6 +71,7 @@ Before this the barrier to entry was very high like your to buy a laptop which c
 
 Now u can just by a 10000 /6000 RS mobile phone where you easily surf and play the games over the internet 
 
+Slide No 3:
 
 COST OF MOBILE INTERNET AROUND THE WORLD:
 
@@ -93,6 +96,8 @@ So all this things were happening slowly slowly.
 
 SO ALL THESE THINGS LED TO :
 
+Slide No 4:
+
 THE RISE OF MOBILE TRAFFIC AND CURRENT MOBILE TRAFFIC SHARE
 
 Internet traffic is more and more coming from mobile phone like if you see the graph from 2009 2020 . 
@@ -100,9 +105,9 @@ Internet traffic is more and more coming from mobile phone like if you see the g
 -only using it 2010 2011 2012  things getting serious 
 -2015 15 16 18 19 there is the high growth literally and it got boosted here and totally 50% is from now mobiles here 
 -In 2020 there is dip here, anyone tell me why so?
--Work from home , Covid- People continously working -Sick of using mobiles phone - that was the reason I think things are coming normal and people again
+-Work from home , Covid- People continously working -Sick of using mobiles phone - that was the reason I think things are coming normal and people again are increasing.
 
-
+Slide No 5:
 MOST POPULAR SOCIAL PLATFORMS:
 
 if you're in some statistics of social media
@@ -114,9 +119,11 @@ if you're in some statistics of social media
 -I would also say, one of reason was REACT as well all prediction and their implementation of react right?
  lead to good performance right and they were able to capitalise on it
  
-  and we'll see how they are able to  and what they did with REACT that led to this kind of super grade user based on facebook
+  and we'll see how they are able to and what they did with REACT that led to this kind of super grade user based on facebook
 
   WE WILL SE THAT BEFORE THAT ,
+
+  Slide No 6:
 
   EFFECTS:
   
@@ -134,6 +141,8 @@ So all these means that huge business opportunity
 
 AND facebook saw money in their eyes and they saw this happening in 2010 itself 
 then they want to like make it happened that they won't have their most user and they did it and see how they did it with React 
+
+Slide No 7:
 
 MOST POPULAR VIDEO STREAMING PLATFORMS
 
