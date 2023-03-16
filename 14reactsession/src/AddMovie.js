@@ -129,17 +129,17 @@ export const AddMovie = () => {
         />
         
       </div>
-      <div style={{ margin: "auto", width: "50%", display: "flex" }}>
+      <div style={{display: "flex" }}>
         <Button
           type="submit"
-          sx={{ width: "100%", fontSize: "18px" }}
+          sx={{ width: "40%", fontSize: "18px" }}
           variant="outlined"
         >
           Add Movie
         </Button>
 
         <Button
-          sx={{ width: "100%", fontSize: "18px", marginLeft: "15px" }}
+          sx={{ width: "40%", fontSize: "18px", marginLeft: "15px" }}
           variant="outlined"
           color="secondary"
           onClick={() => {
