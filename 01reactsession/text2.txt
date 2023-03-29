@@ -1,0 +1,71 @@
+REACT is the most popular javascript library to build front end application
+REACT IS FAST, and why it is fast 
+
+Before going to create an REACT APP
+let us just create an Hello World Program 
+
+create index.html
+
+Using HTML
+
+<div id="root">
+        <h1>Hello World-HTML</h1>
+</div>
+
+Using JavaScript
+
+ <script>
+        const heading=document.createElement('h1')
+        heading.innerHTML="Hello World-Javascript"
+        const root=document.getElementById('root')
+        root.appendChild(heading)
+</script>
+
+h1 tag was created and was injected inside the root
+
+Using REACT
+
+This all createElement,getElementById,innerHTML how this all is underxstood by the browser
+This are all the superpowers which browser already has it.
+That why it can reconginize.
+
+Now, Moving forward browser cannot understand REACT. 
+first we will have to make it understand
+
+Let us do via CDN:
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+Now, we have injected REACT in our project
+Lets go inside the link
+Facebook Developers have written this.
+
+When we are importing CDN Links to our project that means we are injecting react into out project.
+This is how get React in our project.
+
+Now type React in console .
+
+Now we can use React in our project.
+1-react core
+2-react-router-dom
+
+React also works on Mobile phone REACT NATIVE.
+1st is the core of it 
+2nd is the bridge between the react and the browser, ie,react-router-dom
+
+So that why we have REACT DOM in the browser
+
+When we injecting 2 files in our file , we are getting superpowers which REACT is injecting into us.
+
+And now we as Developers use this superpowers and build the large scale application.
+
+Now , let us build the basic Program, hello world.
+
+hello world program created, now just copy and paste the entire stuff in 
+app.js and index.html file.
+
+If we want to design it then,
+index.css file.
+
+
+

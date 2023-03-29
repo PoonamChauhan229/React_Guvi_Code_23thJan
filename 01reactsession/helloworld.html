@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="root">
+
+    </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- Injectd the React Web version of React -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+    // how to create the h1 tag
+    // document.createElement in js 
+    // but here we will use
+    // React.createElement('')
+    // creating an element is the core thing of REact so it comes form React
+    const heading=React.createElement('h1',{id:"title"},"Hello world from React")
+    //We need to create the root so it is the job of ReactDOM.
+    const root=ReactDOM.createRoot(document.getElementById('root'))
+    // now render the heading inside the heading
+root.render(heading)
+//{} for the element attribute//tag attribute
+// where we will attribute to the tags
+    // {
+        // id:title
+    // }
+</script>
+</body>
+</html>
