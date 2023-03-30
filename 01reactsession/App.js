@@ -17,9 +17,44 @@ root.render(heading);
 // id:title
 // }
 
-console.log(heading)
+console.log(heading)//it returns an object
 // Now, h1 is not an h1 tag , it is an object.
 // REact h1 element.
 // React element is a normal JS.
 
 // Props are childeren +attributes that we pass in.
+// all these comes under props.
+
+
+
+// Nested Structure
+
+const parent=React.createElement("div",{id:"parent"},
+React.createElement("div",{id:"child"},
+[
+  React.createElement("h1",{},"I am an h1 tag"),
+  React.createElement("h2",{},"I am an h2 tag")
+]
+))
+console.log(parent)
+const root1=ReactDOM.createRoot(document.getElementById("root"))
+root1.render(parent)
+
+
+const parent1=React.createElement("div",{id:"parent"},
+[
+  React.createElement("div",{id:"child"},
+[
+  React.createElement("h1",{},"I am an h1 tag"),
+  React.createElement("h2",{},"I am an h2 tag")
+]),
+React.createElement("div",{id:"child2"},
+[
+  React.createElement("h1",{},"I am an h1 tag"),
+  React.createElement("h2",{},"I am an h2 tag")
+])
+
+])
+console.log(parent1)
+const root2=ReactDOM.createRoot(document.getElementById("root"))
+root1.render(parent1)

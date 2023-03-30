@@ -67,5 +67,46 @@ app.js and index.html file.
 If we want to design it then,
 index.css file.
 
+Okay,
+Now if we want to create an nested an elements how do we create it.
+<div id='parent'>
+        <div id='child'>
+                <h1></h1>
+        </div>
+</div>
+
+Suppose now you have to create a siblingd
+
+<div id='parent'>
+        <div id='child'>
+                <h1></h1>
+                <h2></h2>
+        </div>
+</div>
+
+convert 3 parameter to an array.
+so put as an array of children.
+
+And it throws some error , we will see that later on upcoming classes.
+
+<div id='parent'>
+        <div id='child'>
+                <h1></h1>
+                <h2></h2>
+        </div>
+        <div id='child2'>
+                <h1></h1>
+                <h2></h2>
+        </div>
+</div>
+
+So Now, it looks super complicated right,
+if it has more nested structure, it will become more complicated and looks ugly.
+
+Thats why we have in React something known as JSX which exists.
+We will see this in the next class.
+JSX will make our life easy but what i showed you now  is the core of REACT.
+This is how REACT offer us.
+
 
 
