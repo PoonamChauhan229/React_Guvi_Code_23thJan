@@ -109,4 +109,8 @@ JSX will make our life easy but what i showed you now  is the core of REACT.
 This is how REACT offer us.
 
 
+Now, if we put App.js , above the 2 script tags, will it work?
+It wont work.
+throws an error => REact is not defined.
+
 
