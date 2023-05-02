@@ -13,10 +13,14 @@
     </div>
 
     <script>
+        // How do we do it 
+        // We use document.createElement('h1') and then
         const heading=document.createElement('h1')
-        heading.innerHTML="Hello World-Javascript"
+        heading.innerHTML="Hello World from Javascript"
+        // I need to append it inside 
         const root=document.getElementById('root')
-        root.appendChild(heading)
+        root.append(heading);
+        // this heading go as a child inside the root.
     </script>
 </body>
 </html>

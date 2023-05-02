@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- The first ever program which we learn in any language -->
     <div id="root">
 
     </div>
@@ -20,16 +20,20 @@
     // but here we will use
     // React.createElement('')
     // creating an element is the core thing of REact so it comes form React
+    //it takes 3 arguments
     const heading=React.createElement('h1',{id:"title"},"Hello world from React")
-    //We need to create the root so it is the job of ReactDOM.
+    // It works little different than JS
+    // I need to render the heading inside the Root
+    //We need to create the root where it will do all DOM manipulation so it is the job of ReactDOM
+    
     const root=ReactDOM.createRoot(document.getElementById('root'))
     // now render the heading inside the heading
-root.render(heading)
-//{} for the element attribute//tag attribute
-// where we will attribute to the tags
-    // {
-        // id:title
-    // }
+    root.render(heading)
+    //{} for the element attribute//tag attribute
+    // it will give attributes to the tags
+        // {
+            // id:title
+        // }
 </script>
 </body>
 </html>
