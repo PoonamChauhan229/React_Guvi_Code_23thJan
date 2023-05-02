@@ -17,7 +17,8 @@ root.render(heading);
 // id:title
 // }
 
-console.log(heading)//it returns an object
+console.log(heading)
+//it returns an object
 // Now, h1 is not an h1 tag , it is an object.
 // REact h1 element.
 // React element is a normal JS.
