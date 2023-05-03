@@ -1,0 +1,153 @@
+Today, we are going to start with React and it will be a project based learning.
+We will be building Application on the same and accordingly we will be moving ahead.
+
+REACT is the most popular javascript library to build front end application
+REACT IS FAST, and why it is fast 
+This all we will learn 
+
+Before going to create an REACT APP
+let us just create an Hello World Program 
+
+create index.html
+
+Using HTML
+
+<div id="root">
+        <h1>Hello World-HTML</h1>
+</div>
+
+The first ever program which we learn in any language
+
+
+Using JavaScript
+
+ <script>
+        const heading=document.createElement('h1')
+        heading.innerHTML="Hello World-Javascript"
+        const root=document.getElementById('root')
+        root.appendChild(heading)
+</script>
+
+h1 tag was created and was injected inside the root
+
+Using REACT
+
+This all createElement,getElementById,innerHTML how this all is underxstood by the browser
+This are all the superpowers which browser already has it.
+That why it can reconginize.
+
+Now, Moving forward browser cannot understand REACT. 
+first we will have to make it understand
+
+First we will bring REact to our Project.
+Let us C how we can do that.
+
+1st way is to get the React via CDN
+
+CDN are Content Delivery Network and these are the website where REACT library has been hosted.
+We are just pulling REact into our project.
+
+Let us do via CDN:
+just above body let us put these CDN links.
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+Now, we have injected REACT in our project
+Lets go inside the link
+Facebook Developers have written this.
+
+Now , Browsers will understand REACT.
+
+When we are importing CDN Links to our project that means we are injecting react into out project.
+This is how get React in our project.
+
+Now type React in console .
+
+Now we can use React in our project and it is available for our use.
+1-react core
+2-react-router-dom
+
+React also works on Mobile phone REACT NATIVE.
+1st is the core of it 
+2nd is the bridge between the react and the browser, ie,react-router-dom
+which is used to modify the DOM
+So that why we have REACT DOM in the browser
+
+
+When we are injecting 2 CDN links in our file , we are injected superpowers which REACT is giving to us.
+
+And now we as Developers use this superpowers and build the large scale application.
+
+This was the very fundamental which i wanted to tell you.
+
+Now we are going to use this superpowers
+and Now let us just explore the beauty of REACT.
+
+Now , let us build the basic Program, hello world.
+
+
+hello world program created,
+So now 1st hellow world program is build here.
+
+now just copy and paste the entire stuff in 
+app.js and index.html file.
+
+When React was built, it was built with a philosophy that manipulate DOM using JS.
+React gives us super powers to do so.
+
+Most Costly operation in the Webpage,when the DOM nodes needs to be manipulated.
+The DOM Tree is getting changed so that is the most costliest operation over here.
+
+If we want to design it then,
+index.css file.
+
+So we have got the CSS as well in the file.
+Okay,
+
+Now if we want to create an nested an elements how do we create it.
+<div id='parent'>
+        <div id='child'>
+                <h1></h1>
+        </div>
+</div>
+
+Suppose now you have to create a siblingd
+
+<div id='parent'>
+        <div id='child'>
+                <h1></h1>
+                <h2></h2>
+        </div>
+</div>
+
+convert 3 parameter to an array.
+so put as an array of children.
+
+And it throws some error , we will see that later on upcoming classes.
+
+<div id='parent'>
+        <div id='child'>
+                <h1></h1>
+                <h2></h2>
+        </div>
+        <div id='child2'>
+                <h1></h1>
+                <h2></h2>
+        </div>
+</div>
+
+So Now, it looks super complicated right,
+if it has more nested structure, it will become more complicated and looks ugly.
+
+Thats why we have in React something known as JSX which exists.
+We will see this in the next class.
+JSX will make our life easy but what i showed you now  is the core of REACT.
+This is how REACT offer us.
+
+
+Now, if we put App.js , above the 2 script tags, will it work?
+It wont work.
+throws an error => REact is not defined.
+
+
