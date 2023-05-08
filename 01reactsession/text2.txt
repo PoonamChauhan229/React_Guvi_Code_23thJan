@@ -511,7 +511,7 @@ Since we have here JSX and it will convert to JavaScript.
 and class is a reserved keyword in JS
 Hence , we have to use classname .
 
-label for should not be used , we need t use htmlFor.
+label for should not be used , we need to use htmlFor.
 
 So, now we need HTML file to render on the browser and link up all the HTML files
 Right?
@@ -573,6 +573,14 @@ React Installation Process
 
 Slide No 40 Completed.
 
+const name="DivyaShree"
+const time=30;
+return(
+  <div>
+      <h1>Time to complete-{time*2}</h1>
+      <p>Hello,{name}</p>
+  </div>
+)
 
 
 
