@@ -141,7 +141,7 @@ So Now, it looks super complicated right,
 if it has more nested structure, it will become more complicated and looks ugly.
 
 Thats why we have in React something known as JSX which exists.
-We will see this in the next class.
+We will see this in the next class or lets watch as we have time okay.
 JSX will make our life easy but what i showed you now  is the core of REACT.
 This is how REACT offer us.
 
@@ -149,5 +149,8 @@ This is how REACT offer us.
 Now, if we put App.js , above the 2 script tags, will it work?
 It wont work.
 throws an error => REact is not defined.
+
+
+
 
 
