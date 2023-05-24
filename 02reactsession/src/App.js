@@ -1,10 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
 import {useState} from "react"
+import Firstcode from "./Components/Firstcode";
+import Secondcode_Message from "./Components/Secondcode_Message";
+
+
 
 function App() {
-  const name = "Divyashree";
-  const time = 30;
 
   const students = [
     {
@@ -22,8 +23,14 @@ function App() {
   ];
   return (
     <div className="App">
-      <h1>Hi {name}- Normal</h1>
-      <p>Time to complete {time * 4} mins</p>
+       {/* 3 ways we can write  */}
+
+      {Secondcode_Message("x")}
+      <Secondcode_Message res="y"></Secondcode_Message>
+      <Secondcode_Message res="Vindya"/>
+      
+      <Firstcode/>
+      
     {
       students.map((element) => {
 
@@ -85,3 +92,5 @@ function Counter(){
 }
 
 export default App;
+
+

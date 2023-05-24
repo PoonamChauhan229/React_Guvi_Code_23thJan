@@ -1,0 +1,114 @@
+npx create-react-app appname
+folder structure explain:
+
+Explain the Folder structure:
+When you create a new React application using npx create-react-app, it generates a default folder structure for you. Here's an example of the folder structure created by create-react-app:
+
+my-app
+├── node_modules
+├── public
+│   ├── index.html
+│   ├── favicon.ico
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── serviceWorker.js
+│   ├── setupTests.js
+├── .gitignore
+├── package.json
+├── README.md
+
+
+Let's briefly go through the purpose of each folder and file:
+
+node_modules: This folder contains all the dependencies installed for your project. It is managed by npm (Node Package Manager).
+
+public: This folder contains static assets that will be served by your application. The main file in this folder is index.html, which is the entry point of your React application.
+
+src: This is the main folder where you'll be working on your React application. It contains the source code of your application, including the JavaScript files, CSS files, and other assets.
+
+App.css, App.js, App.test.js: These files are part of the default App component. You can modify or replace them as per your application's requirements.
+
+index.css and index.js: These files are responsible for rendering the root component (App) into the DOM.
+
+logo.svg: An example SVG file that can be used or replaced with your own logo or other assets.
+
+serviceWorker.js: A file that enables you to create a progressive web application (PWA) with offline caching and other features.
+
+setupTests.js: A file used for configuring test settings if you decide to write tests for your application.
+
+.gitignore: This file specifies which files and folders should be ignored by Git version control.
+
+package.json: This file holds metadata about your project and lists the project's dependencies and scripts.
+
+README.md: A readme file that typically contains information about your project, including setup instructions and other relevant details.
+
+Keep in mind that this is the initial folder structure created by create-react-app, and you can customize it as per your project's requirements. As your React application grows, you may add additional folders and files to better organize your code.
+
+App.js is the file which gets rendered on the screen.
+_____________
+
+npm start> Run the code
+
+JSX:
+JSX is not HTML inside JavaScript
+JSX has HTML like syntax
+JSX (JavaScript XML) is an extension to JavaScript that allows you to write HTML-like code within your JavaScript files. JSX elements are the building blocks of React components
+
+Advantages of JSX:
+>Developer Experience
+>Syntactical SUgar
+>readability
+>Less code
+>Maintainabilty
+>No Repetition
+
+class is a resevered keyword for classes and objects so we wont use class in react
+We will be using className hereafter.
+
+There are 2 types of components
+state components
+functional components
+
+Nowadays, we use functional components, will explain you this first .
+
+In App.js 
+    > Firstcode write the code 
+    >rerun the project agian
+
+Let us create our own component.
+And now we will create in separte files so that we will easy readability in code.
+
+Few Things to remember while creating an component.
+>The component name should start with capital letter
+>it should return 1 JSX
+>Whereever we need JS , we need to template syntax {}
+>we should use className wherever we will be desining our page.
+
+
+Now we created a Functional component right?
+that is function we created
+
+Now we know , we pass parameters and arguments to it 
+In React how do we do that?
+
+we say as Passing an props.
+Now what is Props
+Props is nothing but shortform for properties.
+Props means passing some data to the functional component.
+
+So now let c how we can pass it 
+
+
+
+
+
+
+
+
+
+
