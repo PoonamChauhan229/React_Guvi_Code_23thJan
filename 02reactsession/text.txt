@@ -100,9 +100,63 @@ we say as Passing an props.
 Now what is Props
 Props is nothing but shortform for properties.
 Props means passing some data to the functional component.
+It means React wraps up all these properties into a variable known as props.
 
 So now let c how we can pass it 
 
+{Secondcode_Message("x")}
+      <Secondcode_Message res="y"></Secondcode_Message>
+      <Secondcode_Message res="Vindya"/>
+
+Task to do :
+Adding images in front of each name.
+
+React.Fragment:
+<React.Fragment> acts as a wrapper
+This can be useful when you want to avoid introducing unnecessary styling or affecting the layout of your components.
+It's commonly used when you need to return multiple elements from a component's render method, but you don't want to wrap them in a container element like a <div>.
+It is a built-in component that allows you to group multiple elements together without adding an extra DOM element
+
+Lets us go for the stying now.
+give className
+Delete everything from App.css
+and start styling .
+
+Task 02:
+
+Same Image is repeated again and again
+And we want different images
+So we will use the feature of props
+Lets Go and do it 
+So we will change it
+So Now, it becomes very easy tommrow, if we need to change.
+
+Now, in the Secondcode_Message, there is a problem ,
+because we are repeting the stuffs again and again.
+
+Now , is the code DRY
+So we shouldnt repeat.
+What we will use
+Whenevr there is an repition, we will use loops
+
+So here what we will do then,
+we need to store the names and pics somewhere,
+now if we need to store in array of objects
+const students=[{},{},{},{}]
+
+So we are done with this,
+Tommrow if any new student joins up where we will update we will update in our array.
+
+Now if you sees in Thirdcode_Message, we have everywhere props so how can remove that.
+Lets c that as well 
+
+Object Destructring 
+GIT Take up.
+
+
+
+
+ 
 
 
 

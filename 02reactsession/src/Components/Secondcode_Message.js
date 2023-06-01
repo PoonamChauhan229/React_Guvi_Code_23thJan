@@ -1,12 +1,16 @@
 import React from 'react'
-
 const Secondcode_Message = (props) => {
     const name="Poonam"
   return (
-    <>
+   <>
+    <div className='border'>
+      {/* Task 01 */}
+    {/* <img className="profile-pic" src="https://i.pinimg.com/736x/59/37/5f/59375f2046d3b594d59039e8ffbf485a.jpg" alt=""/> */}
+    {/* Task 02 */}
+    <img className="profile-pic" src={props.pic} alt=""/>
     <h2>Hi {name}, How are you?</h2>
-    <h1>Hi, {props.res} How are you?</h1>
-    {props.res}
+    <h3>{props.nickName} is My NickName</h3>
+    </div>
     </>
   )
 }
