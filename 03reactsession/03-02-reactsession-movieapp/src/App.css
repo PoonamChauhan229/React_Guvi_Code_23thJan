@@ -32,3 +32,10 @@
   margin-right:5%;
   margin-top: 2%;
 }
+.counterContainer{
+  margin-left: 10px;
+}
+.likeButton, .dislikeButton{
+  padding: 2px;
+  margin-left: 2px;
+}

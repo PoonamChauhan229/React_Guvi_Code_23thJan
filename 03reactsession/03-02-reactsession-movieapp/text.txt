@@ -156,6 +156,11 @@ So we will use ternary operator
 
 Task:
 Toggle Summary:
+Create an Toggle Button 
+
+We created a Counter compoent, lets take that over here as well.
+Now its done
+
 
 
 
