@@ -1,0 +1,22 @@
+.profile-pic{
+  width:200px;
+  height:200px;
+ }
+ 
+.App {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.border{
+  border: 1px solid navy;
+  width:287px;
+  margin: 5px;
+}
+.counterContainer{
+display: flex;
+gap:7px;
+}
+.likeButton,.dislikeButton{
+  border-radius: 10%;
+}
