@@ -109,6 +109,7 @@ Now lets pass it as props and change the details of it
 and use destructing now over here.
 Now lets use spread operator and do it
 {...element}
+explain all 3 types 
 
 So we have got it now.
 and now let go ahead design it as it doesnt good at all
@@ -116,6 +117,45 @@ and now let go ahead design it as it doesnt good at all
 Lets go to App.css and design it.
 
 
+After all we have done ,
+Now we have to do styling using react
+So let see how we can do it.
+
+Styling in React can be done using various approaches
+One we will see now,
+Inline Styles
+>
+So we will try to style the rating according to the values
+Condition1 : rating is more than 8 =>rating>8=>green color
+Condition2 : rating is less than 8 =>rating<8=>red color
+
+To style , what we will do here is 
+We will create a object
+
+const styles={
+
+}
+
+This styles is userdefined , we can use any name for it.
+
+Y React Takes styles as an object:
+
+>React takes styles as an object to provide more dynamic and flexible way for applying styles to components.
+>By accepting a style object, React allows you to apply dynamic styles based on props, state, or other conditions
+>The style object can be dynamically generated, you can easily modify styles based on changing data or user interactions
+>With an object-based approach, you can conditionally apply styles by including or excluding certain properties from the style object based on conditions. 
+>This provides a convenient way to handle different styling scenarios
+
+As soon as we give to the rating
+<h4 className="movieRating" style={styles}>
+All the rating turns into green color
+
+Now how we will condition them?
+So we will use ternary operator
+5>4?"Awesome":"Cool"
+
+Task:
+Toggle Summary:
 
 
 

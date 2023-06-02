@@ -1,11 +1,12 @@
 .movieContainer{
-  height:410px;
-  width:270px;
+  height:430px;
+  width:314.8px;
   border:1px solid red;
+  margin-bottom: 2%;
 }
 .moviePoster{
-  height: 300px;
-  width:270px;
+  height: 320px;
+  width:314.8px;
 }
 *{
   padding:0;
@@ -13,7 +14,7 @@
 }
 .movieSummary{
   overflow: hidden;
-  height:69px;
+  height:68px;
   padding:5px;
 }
 .movieSpecs{
@@ -23,6 +24,11 @@
 }
 .App{
   display: flex;
-  gap:10px;
+  gap:2%;
   flex-wrap: wrap;
+  width:90%;
+  border: 1px solid red;
+  margin-left:5%;
+  margin-right:5%;
+  margin-top: 2%;
 }
