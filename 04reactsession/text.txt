@@ -1,0 +1,176 @@
+Import Bootstrap in index.html
+Take navbar and implement it in App.js
+
+Later on we will make our search Functionality also work.
+
+Now, let check the warnings inconsole , what we are getting
+let's go in the console and check
+
+Warning: Each child in a list should have a unique "key" prop.
+// how to rectify this warning
+React is fast because it has 
+    >Virtual DOM
+    >reconciliation
+    >diff alogorithm
+
+
+Virtual DOM
+    In React, the Virtual DOM (VDOM) is a lightweight, in-memory representation of the actual DOM.
+Reconciliation >
+    in React refers to the process of updating the user interface (UI) to reflect changes in the application's state. When the state of a component or its props change, React performs a series of steps to efficiently update the UI 
+
+Diff alogorithm>
+    In React, the diffing algorithm is used during the reconciliation process to identify the differences between the previous Virtual DOM (VDOM) representation and the new VDOM representation. This algorithm helps determine the minimum number of changes required to update the actual DOM efficiently 
+    in diff algorithm current tree is compared with the new tree and whatever the difference is reflected thats get updated.
+
+
+In React, when rendering an array of elements, each element should have a unique "key" prop assigned to it. The "key" prop is used by React to keep track of individual elements and optimize the reconciliation process.
+
+By providing a unique "key" prop for each element in the list, React can efficiently track and update the specific elements when changes occur, avoiding unnecessary re-renders and potential issues.
+
+So what is unique in this
+in an array the unique is the index number
+so we will be using the index number and passing it as a prop
+
+Lets do it over here.
+<Movie key={index}/>
+
+Now, lets create an another component.
+AddColor
+    >input
+    >AddColor Buton
+
+Over here, in the input box whatever color type 
+> first the inputbox background color should change with that color
+> the same color without the text should be added down below
+
+and import the same in App.js
+
+So do it then.
+
+declared a state vaaraible
+const [colorVal,setcolorVal]=useState("red")
+
+passed value ={colorVal}
+
+Styling done
+const inputStyle={
+backgroundColor:colorVal
+}
+style={inputStyle}
+
+onChange event:
+onChange={(e)=>{
+    setcolorVal(e.target.value)
+    }}
+
+
+Second task: 
+
+To add the color down when , we click on addcolor 
+button
+
+Array=> get added to that array and then you map through that array
+Mapping create a div inside it which will render.
+
+{
+        colorList.map((element,index)=>{
+          return <div style={{backgroundColor:element,height:"30px",width:"50px"}}></div>
+        })
+      }
+
+But instead of doing directly like lets create an component.
+ColorBox
+create a div and the stylin as well.
+
+
+Class component
+// let's get classy can you guess what we are going to study in today
+// class based components
+
+// react initially started with class based component
+// when React was started you know the concept of components was introduced with class based
+// this hooks have recently started coming in the 
+// what I am trying to say let me repeat it once again react initially started with classes and there was nothing like functional component.
+
+So there was no concept of functional components, no concept of Hooks ,Nothing was there.
+But what happend is many people were coming from the era of Jquery and they moved to React
+And for them, it was supposed to be super amazing thing to react component and to right class based components.
+There was reconcilltaion process not very effective like today but it was still effective.
+
+A lot of big apps were made using these class components.
+Class based component was the only big thing during that tym
+React was built on Class based component
+
+So for class based component code is little different.
+// when we do certain things in react and we are writing class based component the code used to get Messy
+the code was not very much clean
+There were a lot of things which we were not writing in a good way right
+// suppose if I am writing a same component using class based component and  functional component so class component had poor and it was a little less maintainable and it was confusing for a lot of new developers
+// today when you start react it is very easy 
+// that is why we started the react with functional component.
+// I did not wanted to like get you the panic state because if I started with class components like your head would blow up
+Now we have enough knowledge that we can understand class this components very beautifuly
+This is good time to tell you what is class based component.
+if you are creating a new project you will not be writing class based component it is no longer used.
+
+Basically don't try it now because you can do almost do everything with functional component.
+
+How do we create an class based component?
+
+ClassProfile.js
+Let us see how do we write a Class based component
+
+What is a functional component ?
+At the end of the day , its a normal functional
+
+Simialarly, what is classbased component?
+It is a JS class.
+
+First : Write Class based component
+Second: Passing props to class based component
+
+Class>props
+Now, here React is basically tracking your component now which is a class based component 
+React knows that whenever there is an change , prop change or change state in my class it has to re-render it.
+
+In functional component, we were saying render and re-render ,that terminology/nomenclature  comes from classbased component because there is a render method.
+Rendering as a term comes from class component and eralier there was no functional component 
+So when we say we are rendering someting we are return some JSX.
+
+Whenever a parent is passing the props , it will take this props and it will attach it to "this" keyword of the class instance.
+
+this props is an object and this all happens while we are doing the reconciliation process is triggered.
+
+React automatically get this props as sson as we pass it.
+
+Lets create a state vaaraible.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

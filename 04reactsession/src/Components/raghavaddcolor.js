@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ColorBox } from "./ColorBox";
+import { ColorBox } from './ColorBox';
 
 const AddColor = () => {
   const [color, setColor] = useState("");

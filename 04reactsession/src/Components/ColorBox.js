@@ -1,4 +1,5 @@
-export const ColorBox = ({ color }) => {
+export const ColorBox = ({color}) => {
+  console.log(color)
   const ColorBoxStyle = {
     backgroundColor: color,
     height: "25px",
@@ -6,7 +7,7 @@ export const ColorBox = ({ color }) => {
     marginTop: "10px"
   };
   return (
-    <div style={ColorBoxStyle}></div>
+    <div style={ColorBoxStyle}>{color}</div>
   );
 
 };

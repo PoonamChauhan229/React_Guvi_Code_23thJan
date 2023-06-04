@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+.movieContainer{
+  height:430px;
+  width:314.8px;
+  border:1px solid red;
+  margin-bottom: 2%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.moviePoster{
+  height: 320px;
+  width:314.8px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  padding:0;
+  margin:0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movieSummary{
+  overflow: hidden;
+  height:68px;
+  padding:5px;
+}
+.movieSpecs{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding:5px;
 }
-
-.App-link {
-  color: #61dafb;
+.App{
+  display: flex;
+  gap:2%;
+  flex-wrap: wrap;
+  width:90%;
+  border: 1px solid red;
+  margin-left:5%;
+  margin-right:5%;
+  margin-top: 2%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.counterContainer{
+  margin-left: 10px;
+}
+.likeButton, .dislikeButton{
+  padding: 2px;
+  margin-left: 2px;
 }
