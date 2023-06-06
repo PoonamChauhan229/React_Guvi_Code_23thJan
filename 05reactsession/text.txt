@@ -1,0 +1,153 @@
+{movieList.map((element) => {
+        return <Movie {...element} />;
+      })}
+
+Which was there in App.js
+Now we will make this one component and call that component over here .
+Always remember your App.js , should always be clean and neat 
+>MovieList.js
+    > The array of objects is unreachable 
+    >So we will have to pass it as props in MovieList.js as movieList
+>Also, will create 1 file constant.js where we will keep our movie data over there.>allmovies
+ <MovieList movieList={allmovies}/> 
+
+ Next We want to create a form.
+ AddMovie.
+ We will be adding the movies and it should get added to movielist
+ >AddMovie.js
+ > We will go to bootstrap and create a form from here.
+ >Link the bootstrap and then do it.
+
+ >FIrst of all , what we have to do here is.
+ >We have to update the value of 4 inputs right,
+ >So we will have to use 4 useState over here 
+ >We will have to change the value on onChange Method on the button and we will set the value (e.target.value)
+ onChange={(e) => {
+            setMovieName(e.target.value);
+          }}
+
+Next When we come to addMovie Button.
+When we click the orginal list of movies should get updated.
+In order to update the list , we will have to create an useState over there.
+>App.js
+ const [movieList, setMovieList] = useState(allmovies)
+>MovieList.js
+and i will pass as  a props now , movieList instead of allmovie , why because , my list gets updated that it should render.
+>App.js
+<AddMovie movieList={movieList} setMovieList={setMovieList}/>
+>AddMovie.js
+> receive both as props.
+
+Also, when we click, a new object will create from the input feilds.
+and that we can use to update the movielist.
+>Creating an object
+const movie={ name:movieName, poster, rating, summary }
+>Updating to the movieList
+ setMovieList([...movieList,movie]);  
+ Then, it will render to the browser.
+
+ So, we are successfully able to add to the movielist and it is rendering to the screen as well.
+
+
+ Now, next topic is routing, 
+
+ How we will do the routing and why do we need it.
+ Now, if you see it is clumsy on the same page, we can make route.
+
+
+ Why do we need routing
+ >Organized
+ >It gives user an ease of access
+ >Sharing the URL.
+  >if we want to share any link we can do that
+>Secure the route
+Lots of Apps, we need to login then only you can access the content
+eg:Netflix.
+Depending upon the scenario, we need to hide or show the pages to the user.
+
+But the problem with React App, React App is a SPA.
+Single Page Application.
+That means only page, how do we bring routing only in 1 page.
+Lets the questions?
+In older apps , if we go for routing,it takes lot of time.
+
+We want ,
+SPA>
+very smooth and
+MPA>
+very fast.
+
+So now let do the Routing setup.
+Version 6 we will use.
+npm i react-router-dom@6
+
+install it.
+Check the pakage.json=> you will get the react-router-dom 
+
+IN Router,
+We have 2 routers
+/=>Browser Router
+#=>Hash Router
+
+Why do we need these routers
+and also we wont be using both the routers at the same time.
+
+#=>Hash Router:
+OLder Browsers
+eg:Instead
+Works both in new and old Browsers
+
+/=>Browser Router
+New Browsers
+Additional Features
+New Browsers.
+
+Hash Routers has limitations so its not used.
+So we  will be using broswer Routers.
+https://reactrouter.com/en/main/upgrading/v6-data
+REfer the documentation:
+
+Step1:
+
+index.js
+>
+import { BrowserRouter } from 'react-router-dom';
+
+<React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+   
+  </React.StrictMode>
+
+Step2:
+
+<Routes>
+          <Route exact path='/' element={<MovieList movieList={movieList}/> }/>
+        <Route exact path='/addmovie' element={<Addmovie movieList={movieList}/> }/>
+</Routes>
+
+So what they are doing here is, they are matching the path of it.
+ path is the url in the browser =>here they are matching the path of it
+ element shows the component.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

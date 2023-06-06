@@ -1,29 +1,42 @@
-import { useState } from 'react';
-import { ColorBox } from "./ColorBox";
+import React, { useState } from 'react'
+import { ColorBox } from './ColorBox'
 
 const AddColor = () => {
-  const [color, setColor] = useState("");
-  const inputstyle = {
-    backgroundColor: color
-  };
+ 
+  const [colorVal,setcolorVal]=useState("red")
 
-  const initialcolorList = ["red", "orange", "yellow"];
-  const [colorList, setcolorList] = useState(initialcolorList);
+  const [colorList,setcolorList]=useState([colorVal])
+  console.log(colorList)
+
+  const inputStyle={
+    backgroundColor:colorVal
+  }
   return (
     <div>
-      <input style={inputstyle} type="text"
-        value={color}
-        onChange={(e) => {
-          setColor(e.target.value);
-        }} />
+      <input type="text" name="" id="" 
+      value={colorVal}
+      onChange={(e)=>{
+        setcolorVal(e.target.value)
+      }}
+      style={inputStyle}
+      />
+      <button onClick={()=>{
+        setcolorList([...colorList,colorVal])
+        console.log(colorList)
+      }}>AddColor</button>
+      {/* {
+        colorList.map((element,index)=>{
+          return <div style={{backgroundColor:element,height:"30px",width:"50px"}}></div>
+        })
+      } */}
 
-      <button onClick={() => {
-        setcolorList([...colorList, color]);
-      }}>Add Color</button>
-      {colorList.map((element,index) => {
-        return <ColorBox color={element} key={index}/>;
-      })}
+      {
+        colorList.map((element, index)=>{
+          return <ColorBox color={element}/>
+        })
+      }
     </div>
-  );
-};
-export default AddColor;
+  )
+}
+
+export default AddColor

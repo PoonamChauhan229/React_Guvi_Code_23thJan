@@ -4,24 +4,20 @@ const Counter = () => {
   const [like, setLike] = useState(0);
   const [dislike, setdisLike] = useState(0);
   
-  const counterStyle={
-    padding:"3px",
-    margin:"2px",
-    fontSize:"18px",
-    backgroundColor:"transparent",
-    border:"0px"
-  }
-
   return (
-    <>
-      <button style={counterStyle} onClick={() => {
+    <span className='counterContainer'>
+      <button 
+       className='likeButton'
+      onClick={() => {
         setLike(like + 1);
       }}>👍{like}</button>
 
-      <button style={counterStyle} onClick={() => {
+      <button
+       className='dislikeButton'
+      onClick={() => {
         setdisLike(dislike + 1);
       }}>👎{dislike}</button>
-    </>
+    </span>
   );
 };
 export default Counter;

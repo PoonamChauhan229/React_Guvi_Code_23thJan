@@ -1,46 +1,39 @@
-import { useState } from 'react';
-import Counter from './Counter';
+import React, { useState } from 'react'
+import Counter from './Counter'
+import './App.css'
 
+const Movie = ({name,poster,rating,summary}) => {
+  // console.log(name,poster,rating,summary)// typing
 
- const Movie = ({ name, poster, summary, rating }) => {
-  const myStyle={
-    width:"400px",
-    height:"100%",
-    marginTop:"20px"    
+  const styles={
+    // Conditional Styling
+   color: rating>8?"green":"red"
   }
-  const [show, setShow] = useState(false);
-  const ratingStyle = {
-    color: rating > 8 ? "green" : "crimson",
-    fontWeight: "bold",
-    
-  };
+  // Toggle Summary 1st way
 
+  const [show,setShow]=useState(true)
+
+  // const toggleSummary={
+  //   display:show?"block":'none'
+  // }
   return (
-
-    <div className="col" style={myStyle}>
-      <div className="card" style={{width:"280px"}}>
-        <img src={poster} className="card-img-top" alt="..." style={{ height: "350px" }} />
-        <div>
-          <div className="card-body m-0 p-0 d-flex justify-content-around">
-            <span className="card-title m-0 p-0"><b>{name}</b></span>
-            <span className="m-0 p-0" style={ratingStyle}>⭐{rating}</span>
-          </div>
-          <div style={{ textAlign: "center", marginBottom: "15px" }}>
-            <Counter />
-
-            <span
-              style={{ paddingLeft: "10px", fontSize: "21px" }}
-              onClick={() => {
-                setShow(!show);
-              }}>{show ? '🔽' : '🔼'}</span>
-          </div>
-        </div>
-        <div className="card-footer" style={{ height: "150%" }}>
-          {show && <p className="card-text">{summary}</p>}
-        </div>
+     <div className='movieContainer '>
+      <img src={poster}alt="" className="moviePoster" />
+      {/* needs side by side so wrap it in a div */}
+      <div className='movieSpecs'>
+          <h4 className="movieName">{name}
+          <button onClick={()=>setShow(!show)}>{show?"🔽":"🔼"}</button>
+      <Counter/>
+          </h4>
+          <h4 className="movieRating" style={styles}>⭐{rating}</h4>
       </div>
+      {/* Toggle Summary Task */}
+      {/* <button onClick={()=>setShow(!show)}>{show?"🔽":"🔼"}</button> */}
+      {show && <p className="movieSummary" 
+      // style={toggleSummary}
+      >{summary}</p>}
     </div>
+  )
+}
 
-  );
-};
 export default Movie;
