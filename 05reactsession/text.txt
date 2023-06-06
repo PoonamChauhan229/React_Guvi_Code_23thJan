@@ -131,10 +131,45 @@ So what they are doing here is, they are matching the path of it.
  path is the url in the browser =>here they are matching the path of it
  element shows the component.
 
+Alongwith this we need to import as well 
+import {Route, Routes } from 'react-router-dom';
 
+Now, we will do the complete routing here.
 
+After this, we will provide link in the navabr same path.
+So if we now click on it will work.
 
+Link: Changes the URL without refresh
+Routes: It has the group of Routes
+Route:Matches the Url to the component  and finally it displays to the browser.
 
+404 Page Error:
+When this Page Error comes.
+> When we are requesting for a page which is not there
+> When people trying random in URL
+> No longer the page exists.
+Create an NotFound component
+<Route path='*' element={<NotFound/>}/> 
+
+Last Thing >
+Redirection
+
+Old to New Route
+/films to /movies
+we need to move from /films to /movies
+
+if we directily move from /films to /movies
+The customer who are already using /films what they will get 404 error , if we change it directly
+
+We need to do what if anyone /films then it should directly navigate to /movies.
+
+But when do we do it:
+Brand acquisition
+Marketing team-trends
+Security purpose .
+
+For Redirection
+<Route exact path='/films' element={Navigate replace to ="/movies"}/>
 
 
 
