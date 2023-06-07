@@ -1,13 +1,12 @@
-import Navbar from './Navbar';
-import AddColor from './AddColor';
-import { AddMovie } from './AddMovie';
-import MovieList from './MovieList';
+import Navbar from './Components/Navbar';
+import AddColor from './Components/AddColor';
+import { AddMovie } from './Components/AddMovie';
+import MovieList from './Components/MovieList';
 import { useState } from 'react';
-import { allmovies } from "./constants";
+import { allmovies } from "./Components/constants";
 import { Navigate, Route, Routes } from 'react-router-dom';
-import NotFound from './NotFound';
+import NotFound from './Components/NotFound';
 import './App.css'
-import Movie from './Movie';
 
 function App() {
   // for the submission of addmovie.js

@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import Counter from './Counter'
-import './App.css'
+import '../App.css'
+import { useNavigate } from 'react-router-dom'
 
-const Movie = ({name,poster,rating,summary}) => {
+const Movie = ({name,poster,rating,summary,id}) => {
   // console.log(name,poster,rating,summary)// typing
+
+  const navigate=useNavigate();
+
 
   const styles={
     // Conditional Styling
@@ -23,6 +27,7 @@ const Movie = ({name,poster,rating,summary}) => {
       <div className='movieSpecs'>
           <h4 className="movieName">{name}
           <button onClick={()=>setShow(!show)}>{show?"🔽":"🔼"}</button>
+          <button onClick={()=>{navigate(`/movies/${id}`)}}>ℹ</button>
       <Counter/>
           </h4>
           <h4 className="movieRating" style={styles}>⭐{rating}</h4>

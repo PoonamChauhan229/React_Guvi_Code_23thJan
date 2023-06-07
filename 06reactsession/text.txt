@@ -1,0 +1,77 @@
+Now Let us see about Hash Router.
+
+So we just have to go index.js and instead of BrowserRouter we have to write HashRouter.
+
+In this in URL you all will see "#"
+
+So now we will change back.
+
+Next:
+We will now put Trailer , when we click (i) button we should get the trailer of it.
+
+>Add Info Button to the Movie.js
+>Onclick of the button URL should change.
+>url/movies/1 => url/movies/indexno
+
+To change the URL, we will be using new Hook
+useNavigate()
+Why do we need useNavigate()
+
+Till now we changed the URL with Link Tag.
+The Link component is typically used to create clickable links or navigation elements in your application
+
+The useNavigate() hook is part of the React Router library
+provides programmatic navigation within your application=> on a click of button
+
+
+Functionalities:
+navigate("/about")=> about page
+navigate(-1)=> back
+navigate(1)=>next page
+
+For eg:
+navigate(3)=> so it will take to next 3 pages.
+
+Lets use Now,
+
+How we will use.
+>Movie.js
+    > const navigate=useNavigate()
+
+Create an button and just how navigate works.
+
+<button onClick={()=>{navigate('/colorgame')}}>ℹ</button>
+
+Actual how it works, let see
+
+We need index no , so we will go MovieList.js and pass id={index}
+and receive as props in Movie
+
+<button onClick={()=>{navigate(`/movies/${id}`)}}>ℹ</button>
+
+  Now, if we go to browser it will take to 404 Page.
+
+  Let comment out this 404 Page from App.js.
+
+  Okay now we can see the url
+  http://localhost:3001/movies/1
+
+This URL, we need to provide it in Route
+So how we will do it , lets see 
+
+In React, the :id in a route refers to a dynamic parameter or placeholder that can be used to represent a variable value in the URL path. 
+
+you can use :id or any other variable name preceded by a colon (:) to indicate that a specific segment of the URL can vary and should be captured as a parameter.
+
+Now we will useParams()
+
+The useParams() hook is a function provided by the React Router library that allows you to access the dynamic parameters or placeholders defined in your route
+
+console.log(useParams());
+Destructure it.
+const { id } = useParams();
+
+After this, we will design this page as well, lets see.
+
+
+
