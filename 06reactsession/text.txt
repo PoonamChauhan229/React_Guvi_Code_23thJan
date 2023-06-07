@@ -73,5 +73,42 @@ const { id } = useParams();
 
 After this, we will design this page as well, lets see.
 
+Now,rightclick on youtube video
+View Ebedded Code
+
+Copy and paste the code in VS code.
+<iframe></iframe>
+
+Also we shall update the data , adding trailer in the data as well.
+and update the vallues .
+>navigate(-1)
+> take backwards to the page.
+
+
+Explain Material UI.
+
+QN40003 - Doubt in doing the Task
+
+https://mui.com/material-ui/getting-started/installation/
+
+npm install @mui/material @emotion/react @emotion/styled
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>
+
+npm install @mui/icons-material
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
+
+You can check 1 button after adding.
+
+
+
+
+
 
 
