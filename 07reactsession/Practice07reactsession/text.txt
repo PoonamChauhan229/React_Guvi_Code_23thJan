@@ -3,6 +3,21 @@ All the MUI packages or not.
 
 
 Navbar:
-Appbar:
+Appbar with search=> button =>navigate
 UseNavigate
 Button
+
+
+Movie.js
+card=> selected 1 card
+edited
+
+AddMovie.js
+textfeild
+button
+useNavigate
+
+AddColor:
+
+
+

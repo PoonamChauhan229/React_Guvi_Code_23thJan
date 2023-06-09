@@ -1,12 +1,18 @@
+import Box from "@mui/material/Box";
+
 export const ColorBox = ({ color }) => {
-  const ColorBoxStyle = {
-    backgroundColor: color,
-    height: "25px",
-    width: "200px",
-    marginTop: "10px"
-  };
+  console.log(color)
   return (
-    <div style={ColorBoxStyle}></div>
+        <Box
+          sx={{
+            width: "100%",
+            height: "55px",
+            backgroundColor:color,
+            marginTop: "10px",
+            borderRadius:"3%"
+          }}>
+        </Box>
+
   );
 
 };

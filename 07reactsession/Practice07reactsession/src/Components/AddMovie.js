@@ -1,59 +1,126 @@
-import { useState } from 'react';
+import { useState } from "react";
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import { useNavigate } from "react-router-dom";
 
-
-export const AddMovie = ({movieList,setMovieList}) => {
-  
+export const AddMovie = ({ movieList, setMovieList }) => {
   const [movieName, setMovieName] = useState("");
   const [poster, setPoster] = useState("");
   const [rating, setRating] = useState("");
   const [summary, setSummary] = useState("");
-  
-  return(  
+  const [trailer, setTrailer] = useState("");
+  const Navigate = useNavigate();
+  return (
     <>
-      <div className="input-group mb-3 container-fluid w-25 mt-2">
-        <span className="input-group-text">Movie Name</span>
-        <input type="text" className="form-control" value={movieName}
+      <Box sx={{ width: "100%" }}>
+        <TextField
+          sx={{
+            width: "50%",
+            marginLeft: "25%",
+            marginRight: "25%",
+            marginTop: "5%",
+            marginBottom: "2%",
+          }}
+          id="outlined-basic"
+          label="MovieName"
+          variant="outlined"
+          value={movieName}
           onChange={(e) => {
             setMovieName(e.target.value);
-          }} />
-      </div>
+          }}
+        />
 
-      <div className="input-group mb-3 container-fluid w-25 mt-2">
-        <span className="input-group-text">Poster</span>
-        <input type="text" className="form-control" value={poster}
+        <TextField
+          sx={{
+            width: "50%",
+            marginLeft: "25%",
+            marginRight: "25%",
+            marginBottom: "2%",
+          }}
+          id="outlined-basic"
+          label="Poster"
+          variant="outlined"
+          value={poster}
           onChange={(e) => {
             setPoster(e.target.value);
-          }} />
-      </div>
+          }}
+        />
 
-      <div className="input-group mb-3 container-fluid w-25 mt-2">
-        <span className="input-group-text">Rating</span>
-        <input type="text" className="form-control" value={rating}
+        <TextField
+          sx={{
+            width: "50%",
+            marginLeft: "25%",
+            marginRight: "25%",
+            marginBottom: "2%",
+          }}
+          id="outlined-basic"
+          label="Raing"
+          variant="outlined"
+          value={rating}
           onChange={(e) => {
             setRating(e.target.value);
-          }} />
-      </div>
+          }}
+        />
 
-      <div className="input-group mb-3 container-fluid w-25 mt-2">
-        <span className="input-group-text">Summary</span>
-        <input type="text" className="form-control" value={summary}
+        <TextField
+          sx={{
+            width: "50%",
+            marginLeft: "25%",
+            marginRight: "25%",
+            marginBottom: "2%",
+          }}
+          id="outlined-basic"
+          label="Summary"
+          variant="outlined"
+          value={summary}
           onChange={(e) => {
             setSummary(e.target.value);
-          }} />
-      </div>
-
-      <div className="d-grid gap-2 col-2 mx-auto">
-        <button className="btn btn-primary" type="button"
-          onClick={() => {
-            const movie={ name:movieName, poster, rating, summary }
-            setMovieList([...movieList,movie]);  
-            console.log(movieList)          
           }}
-        >Add Movie</button>
-        
-      </div>  
+        />
+
+<TextField
+          sx={{
+            width: "50%",
+            marginLeft: "25%",
+            marginRight: "25%",
+            marginBottom: "2%",
+          }}
+          id="outlined-basic"
+          label="Trailer"
+          variant="outlined"
+          value={trailer}
+          onChange={(e) => {
+            setTrailer(e.target.value);
+          }}
+        />
+
+        <Stack spacing={2} direction="row">
+          <Button
+          sx={{
+            width: "10%",
+            marginLeft: "38%",
+          }}
+            variant="contained"
+            onClick={() => {
+              const movie = { name: movieName, poster, rating, summary,trailer };
+              setMovieList([...movieList, movie]);
+              console.log(movieList);
+            }}
+          >
+            AddMovie
+          </Button>
+
+          <Button 
+          sx={{
+            width: "10%",
+          }}
+          variant="contained" onClick={() => Navigate("/")}>
+            Back
+          </Button>
+        </Stack>
+      </Box>
     </>
   );
 };
-
-
