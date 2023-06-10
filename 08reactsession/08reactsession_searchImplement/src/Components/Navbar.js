@@ -59,24 +59,38 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const Navbar = () => {
+// creating a seperate function
+const filterMovieData=(searchText,movieList)=>{
+  return (movieList.filter((element)=>element.name.toUpperCase().includes(searchText.toUpperCase())))
+}
+
+const Navbar = ({movieList,setMovieList,filterMovieList, setfilterMovieList}) => {
+  console.log(filterMovieList, setfilterMovieList)
   
   
   const navigate = useNavigate();
   const [searchText, setSearchText] = useState('');
-  const [allMovieData,setAllMovieData]=useState(allmovies)
-  console.log(allMovieData)
+  const [searchClicked,setSearchClicked]=useState(false)
+ 
+  console.log(movieList)
 
-  const filterMovieData=(searchText,allMovieData)=>{
-    return (allMovieData.map((element)=>console.log(element)))
-  }
+ 
   // filterMovieData()
   const handleSearchChange = (event) => {
     const value = event.target.value;
     setSearchText(value);
-    console.log(value); // Log the search input value to the console
-    filterMovieData()
+    console.log(value); // Log the search input value to the console    
   };
+  const handleSearchBlur=(event)=>{
+    setSearchClicked(!searchClicked)
+    //filter the data
+    // filterMovieData is return the value we will have to store it in variable
+    const data=filterMovieData(searchText,movieList)
+    console.log(data)
+    // update the data
+    // setMovieList(data)
+    setfilterMovieList(data)
+  }
 
   return (
     <>
@@ -118,6 +132,8 @@ const Navbar = () => {
         value={searchText}
         inputProps={{ 'aria-label': 'search' }}
         onChange={handleSearchChange} // Add the onChange event handler
+        onBlur={handleSearchBlur}
+        
       />
     </Search>
         </Toolbar>
