@@ -8,8 +8,6 @@ const TicTacToe = () => {
         null,null,null,
         null,null,null,
     ])
- 
-
   return (
     <div>
       <Board boardVal={boardVal} setBoardVal={setBoardVal}/>
