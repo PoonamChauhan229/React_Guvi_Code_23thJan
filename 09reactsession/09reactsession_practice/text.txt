@@ -1,0 +1,62 @@
+Theme Change Using MUI Now,
+src=>navbar
+
+Theme Change
+pass the mode and setMode to navbar
+
+Now after this , we are able to change the cards in dark and light theme
+that we need to fix the issue.
+
+if you go to addmovies see here nothing is visible so we need to fix this as well
+o how we will do it.
+
+Why the problem here is coming because, who is been subscribed to the data, only MUI component data.
+that is why reacted to the change.
+not to the components which we have created.
+
+So let us do something and gets subscribed to the backgground as well
+
+So we use some components from MUI to do so.
+One such component we have under surfaces.
+Paper.
+ <Paper elevation={4}>
+ </Paper>
+
+ Now, if you see light dark theme ,its not covering or extending the entire page.
+
+if you increase the elevation , the background color will come lighter.
+
+Paper normal behaviour how much is the content it will cover up that part only that means the height of the content.
+We can use style attribute
+style={{minHeight:100vh}}
+
+Also there is a slight curver across all the sides
+
+borderRadius:"0px"
+
+So we have completed till here, no let us build on game as well
+TicTac toe.
+
+
+TicTac
+
+component
+-TicTacToe > Board component
+-Gamebox
+    > Will have single boxes here 
+
+How many boxes we need like 3 in one row 3*3=9 boxes 
+
+And after this create Board component for Gamebox
+-Board
+    >call Gamebox
+
+
+Challenge
+Add Restart button
+
+and npm package confetti
+
+
+
+
