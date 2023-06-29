@@ -30,8 +30,26 @@ class ClassAbout extends React.Component{
             })
             console.log(json)
             console.log("child-componentDidMount Called"+this.props.name)
+
+            this.timer=setInterval(()=>{
+                console.log("1000")
+            },1000)
         }
 
+        componentDidUpdate(){
+            console.log("child -componentDidUpdate")
+            //this will come after every props and state update
+            // so you will use the if else statement to compare and then render . 
+        }
+
+        componentWillUnmount(){
+            console.log("child-componentWillUnmount")
+            //lot of things needs to be clear thats why this is there
+            //suppose if you have a setInterval in Component DidMount
+            // then we need to clear it bfeore moving to the other componnet
+            clearInterval(this.timer)
+
+        }
 render(){
     console.log("child-Render Called" +this.props.name)
     return(

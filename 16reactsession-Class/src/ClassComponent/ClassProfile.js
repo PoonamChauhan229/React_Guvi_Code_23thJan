@@ -28,18 +28,18 @@ class ClassProfile extends React.Component{
                 count:0,
                 count2:0
             }
-            console.log("parent-Constructor Called")
+            //console.log("parent-Constructor Called")
 
         }
 
         componentDidMount(){
-            console.log("parent-componentDidMount Called")
+           // console.log("parent-componentDidMount Called")
             //Best place to make an API call
 
         }
 
 render(){
-    console.log("parent-Render Called")
+  //  console.log("parent-Render Called")
     return(
         // return JSX
         <div>

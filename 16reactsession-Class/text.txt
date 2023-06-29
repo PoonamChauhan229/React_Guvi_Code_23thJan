@@ -235,6 +235,50 @@ Now, this.setState is quickly re-rendering the stuffs.
 so what this process is known as . This is nothing but an updating process
 
 
+Now, let us comment out Parent console.logs
+
+Now how the sequence would be 
+
+1child constructor
+2child render
+3DOM is updated
+
+4API call 
+5child componentDidMount
+6setState
+//After an API call is made it will setState
+What happens if it setStates
+When you setState updating will start and render will be called again.
+When you make an API call , your component is already mounted.
+We just need to update it , so it updates and it updates the update cycle.
+
+So what happens when you update an component, 
+it will render 
+it will update the DOM
+and it will trigger the another method -componentDidUpdate.
+
+
+So now we ahve soemthing called as componentDidMount
+let us check this 
+
+Now, see carefully, 
+
+componentDidMount is called when after the first render.
+componentDidUpdate is called after each render.
+
+7<UPDATE CYCLE>
+8render
+9update the DOM
+10componentDidUpdate
+11ComponentWillUnMount
+
+So, when ComponentWillUnMount, will be called when we go to another component.
+
+Now, think React developers , typing this all these code.
+
+When React was developed , there were lot more lot more lifecycle methods which have been depricated now.
+Now, only these are there.
+
 
 
 
