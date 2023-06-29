@@ -1,0 +1,70 @@
+Completed Topics :
+JSX
+Props
+Components
+Virtual DOM
+useState
+useParams
+useNavigate
+React Router Implemented
+MUI implemented
+Search box Implemented with constant Data.
+TicTac Toe Gaming  App Done
+
+*********
+PropDrilling To be Implemented
+useContext To be Implemented=> Context API
+*********
+
+Where do you make an API call,
+
+Mock API:
+
+So we make an API call over there , it will keep re-rendering so now where 
+So the best way to call an API , where we can call the API.
+
+Fetch():
+As an when my page loads call an API and fill the data.
+
+There are
+2 Approach:
+
+1
+Page Load=> API call(300ms)=>render page(500ms)
+
+2=>best
+Page Load=> render the page(100ms)=>API(300ms)=>update UI.(500ms)
+
+We will follow the second approach.
+
+React gives the amazing functionality which is known as useEffect
+
+
+useEffect:
+useEffect is a hook ie, a function
+useEffect also come from React Library
+useEffect(()=>{},[])
+UseEffect has callback function and dependancy array.
+callback function will be called whenever the useEffect wants to call and not immediately
+React will make sure that it will call at a specific time.
+
+Whenever our component renders and rerenders so after each render it will call the function which we have passes inside the useEffect.
+
+When does the component renders?
+There are 2 places where it happens
+1-State changes
+2-props changes
+
+But thats a bad way to cal it after each render , 
+we dont want to rerender so we have to pass empty dependancy array.
+
+i can pass even anything in dependancy array , if i want that after that change itself it should work
+
+useEffect-2 parameters
+
+****
+[]-not passed: Render again and again 
+[]-passed:empty dependancyarray: once after render
+[searchTxt]: once after the initial render + everytime after the rerender(my searchText changes)
+    >so the useEffect is dependant on the searchText
+    
