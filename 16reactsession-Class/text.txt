@@ -1,0 +1,251 @@
+Class component
+// let's get classy can you guess what we are going to study in today
+// class based components
+
+// react initially started with class based component
+// when React was started you know the concept of components was introduced with class based
+// this hooks have recently started coming in the 
+// what I am trying to say let me repeat it once again react initially started with classes and there was nothing like functional component.
+
+So there was no concept of functional components, no concept of Hooks ,Nothing was there.
+But what happend is many people were coming from the era of Jquery and they moved to React
+And for them, it was supposed to be super amazing thing to react component and to right class based components.
+There was reconcilltaion process not very effective like today but it was still effective.
+
+A lot of big apps were made using these class components.
+Class based component was the only big thing during that tym
+React was built on Class based component
+
+So for class based component code is little different.
+when we do certain things in react and we are writing class based component the code used to get Messy
+the code was not very much clean
+There were a lot of things which we were not writing in a good way right
+suppose if I am writing a same component using class based component and  functional component so class component had poor and it was a little less maintainable and it was confusing for a lot of new developers
+today when you start react it is very easy 
+that is why we started the react with functional component.
+
+I did not wanted to like get you the panic state because if I started with class components like your head would blow up
+Now we have enough knowledge that we can understand class this components very beautifuly
+This is good time to tell you what is class based component.
+if you are creating a new project you will not be writing class based component it is no longer used.
+
+Basically don't try it now because you can do almost do everything with functional component.
+
+How do we create an class based component?
+
+ClassProfile.js
+Let us see how do we write a Class based component
+
+What is a functional component ?
+At the end of the day , its a normal functional
+
+Simialarly, what is classbased component?
+It is a JS class.
+
+First : Write Class based component
+Second: Passing props to class based component
+
+Class>props
+Now, here React is basically tracking your component now which is a class based component 
+React knows that whenever there is an change , prop change or change state in my class it has to re-render it.
+
+In functional component, we were saying render and re-render ,that terminology/nomenclature  comes from classbased component because there is a render method.
+Rendering as a term comes from class component and eralier there was no functional component 
+So when we say we are rendering someting we are return some JSX.
+
+Whenever a parent is passing the props , it will take this props and it will attach it to "this" keyword of the class instance.
+
+this props is an object and this all happens while we are doing the reconciliation process is triggered.
+
+React automatically get this props as soon as we pass it.
+
+Lets create a state vaaraible.
+
+Just like functional component have its own state , class component also have its own state.
+in class component , class has a constructor which take parameter as props
+this props is amnagaed and handled by React, we dont have to worry about it.
+
+then we have to use super(props)
+
+Why we are creating constructor?
+Basically constructor is a place that is used for initiliazation
+so whenever the class is created and we create an instance of it.
+constructor is automatically called.
+and it is the best place to create the state.
+
+Always constructor is called first and then render method is called.
+
+console.log("Constructor Called")
+console.log("Render Called")
+ console.log("componentDidMount Called")
+
+Whenever a class based component is loaded in the page.
+it has some lifecycle methods.
+These are knwon as lifecycle methods
+constructor, componentDidMount,render etc.
+
+Now in what sequence they are called.
+1-Constructor is called
+2-render is called 
+3-componentDidMountis called 
+
+So what is the best place to make an API call, here.
+in componentDidMount
+becuase first we need to render the component and make an API call.
+
+There are more lifecycle methods
+Just like we have componentDidMount
+
+We will study the most important ones .
+
+
+Create 1 more child component
+
+How it will be called :
+
+parent-Constructor Called
+parent-Render Called
+child Constructor Called
+child-Render Called
+child-componentDidMount Called
+parent-componentDidMount Called
+
+Why it happens,
+First 
+parent-Constructor Called
+parent-Render Called
+Then it encounters , ClassAbout component
+so it triggers its lifecycle method
+child Constructor Called
+child-Render Called
+child-componentDidMount Called
+And at last
+parent-componentDidMount Called
+
+This is the core of it .
+and this how lifecycle methods called.
+
+What is the meaning of Mount?
+Mount means to load
+
+Once the child has done its job
+then it calls the componentDidMount of Parent.
+
+now, 2 child are there then,
+
+How will be component rendered.
+
+parent-Constructor Called
+parent-Render Called
+child Constructor CalledFirst child
+child-Render CalledFirst child
+child Constructor CalledSecond child
+child-Render CalledSecond child
+child-componentDidMount CalledFirst child
+child-componentDidMount CalledSecond child
+parent-componentDidMount Called
+
+So, this was very confusing and people were confused what was rendering and where it is rendering.
+
+That is the reason people were not understanding it.
+Now, React has become very simplified.
+
+
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+This diagram is the source of truth 
+understand this diagram, you will never get confused .
+
+First focus on the Mounting as of now:
+
+When react is rendering the stuff, it does it in 2 phase.
+First phase is the render phase
+Second phase is the commit phase.
+
+React first of all finishes the render phase.
+    > REnder phase includes 
+        > Constructor 
+        > Render method
+
+Commit Phase:
+It is phase where the React is modifying the DOM.
+componentDidMount is called after the initial Render has finished.
+After the component is in the browser.
+
+
+After the render, we are ready to put things to the DOM.
+
+So once again,
+Parent Constructor is called
+Parent render is called
+Then Child life cycle method is triggered and thats the reason it goes on .
+
+So it goes on,
+
+Lets make an API call.
+in componentDidMount.
+https://api.github.com/users/PoonamChauhan229
+github api users
+
+REsearch HM?
+UseEffect Callback cannot be made async 
+but componentDidMount we can make an async function.
+Find out why?
+
+
+After making an API call,
+Now let us just see what is sequence of it.
+And let us remove second child from ClassProfile.js
+
+Parent constructor
+Parent render
+child constructor
+child render
+
+DOM is updated
+json is logged in console
+child componentDidMount
+
+Parent componentDidMount
+
+What if i say , this sequence is not follwed.
+
+
+So the squence is not little changed
+
+Parent constructor
+Parent render
+child constructor
+child render
+
+Parent componentDidMount
+DOM is updated
+json is logged in console
+child componentDidMount
+
+Now, if you see Parent componentDidMount is called before an API call WHy?
+because React finishes your render cycle first then it goes to the commit cycle.
+
+And the above has an API call so React will render things for us and Child componentDidMount will be called later because we are using async and it will take some data to load.
+
+In the commit phase, it will take some data to load, thats why it is calling in the sequence
+
+
+Now, this.setState is quickly re-rendering the stuffs.
+so what this process is known as . This is nothing but an updating process
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
