@@ -63,12 +63,14 @@ export default function Sigin() {
     <form className="App" onSubmit={handleSubmit}>
       <input
         type="password"
+        placeholder="password"
         name=""
         id=""
         onChange={(e) => setPassword(e.target.value)}
       />
       <input
         type="email"
+        placeholder="email"
         name=""
         id=""
         onChange={(e) => setEmail(e.target.value)}

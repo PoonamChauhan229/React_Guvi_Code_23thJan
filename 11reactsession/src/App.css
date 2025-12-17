@@ -22,3 +22,42 @@ button{
     margin-top: 2%;
     font-size: 18px;
 }
+
+.card{
+    height:220px;
+    width:220px;
+    border:1px solid rgb(52, 52, 52);
+}
+img{
+    height:140px;
+    width:160px;
+    padding: 10px 30px;
+}
+p{
+    margin:0;
+    padding:0;
+    font-weight: bold;
+    text-align: center;
+    color:white;
+    font-size: 14px;
+}
+.productList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin:0% 10%;
+    padding:15px
+}
+h1{
+    text-align: center;
+}
+
+/* *{
+    background-color: black;
+    color:white;
+    margin:0;
+    padding: 0;
+      
+} */
+
