@@ -1,0 +1,141 @@
+Why Form Validation?
+- To avoid to store any junk data 
+-Dont want to store any invalid data
+-want to improve the user experience
+
+For this, we are going to use 2 Libraries
+    -Formik
+    -Yup
+
+Formik:
+Formik is a small group of React components and hooks for building forms in React
+Formik Forms not only helps in managing form data, form submission, form validation, and displaying error messages but also helps you to deal with forms in a scalable, performant, easy way and one more important thing is, 
+
+it supports advanced validation with Yup
+
+Yup:
+Yup is a schema builder for runtime value parsing and validation
+
+Lets go to official documentation:
+npm install formik --save
+
+Lets start creating the basic form with a div Tag
+
+ <div>
+        <input type="text" name="" id="" /><br/>
+        <input type="email" name="" id="" /><br/>
+        <input type="password" name="" id="" /><br/>
+       <button>Submit</button>
+</div>
+
+Now, if we see there is no error in the browser,
+How we will get the validation?
+
+When we change it from div tag to form tag
+Then , it will start validating 
+
+So now, let us change form div tag to form tag
+
+Okay, these are the default validations and these validations are not so strong thats why we have to with the custom validation
+
+Default validations are generalized validations so thats why need to go for custom validations.
+
+So now lets start adding to formik to the form
+
+So after installation 
+npm install formik --save
+import useFormik Hook 
+So we will be using useFormik Hook
+
+useFormik Hook:
+useFormik() is a custom React hook that will return all Formik state and helpers directly. Despite its name, it is not meant for the majority of use cases. Internally, Formik uses useFormik to create the <Formik> component (which renders a React Context Provider)
+
+https://formik.org/docs/api/useFormik
+
+value={formik.values.email}
+if we see the form is prefilled with the values and we dont need multiple useStates now.
+
+After this, whenever we submit it, want to see the entire object of the form
+so now how we do it.
+
+Also, if i type anything in the input box its not changing or typing .
+So what is missing in it?
+onChange handler is missing 
+if you dont add it will be an readonly field
+Lets add to it.
+
+onChange={formik.handleChange}
+
+Now, next we want to console the values after we submit the form 
+
+So , then if we see form is submiiting in the URL we can see the values , these shouldnt happen now?
+
+So we want to capture the submit event 
+How do we do that?
+We have to use a Event handler 
+onSubmit we have to use and ask formik to handle it.
+onSubmit={formik.handleSubmit}
+
+After this, Page wont refresh and the URL is also clean.
+
+After this, we want to console.log()
+We will define an cbk function which will log it to the console.
+onSubmit:(values)=>{
+            console.log(values)
+        }
+In the console, we get it as an Object itself
+We dont have to create it.
+Formik is very helpful for us.
+
+We have to rectify the error also,
+its asking whether its an submit btn or normal button so give it as type='submit'
+
+Now, till here we have we done witout validation
+Now, next step is we have to cover the validation as well
+if we see, it simplified version.
+
+Now, we need an another libary for it,
+Part 2:
+Yup libary.
+npm i yup
+
+After installation , import Yup
+
+Create an schema :
+Validation schema
+
+validationSchema:formValidationSchema,
+formValidationSchema just an random name
+
+Now, we need to do what here , if there is an error , we need to display it to the browser as well.
+
+Again we will take the help of formik to do so.
+{formik.errors.password}
+So the error messages are coming from the Yup Library.
+
+If we need a custom message for the error then 
+password:yup.string().min(3,"Atleast 3 char")
+
+Lets add an max 8 char and it should be required
+for email min 5 char and it should be required
+
+Only if the validations are passes form will be submitted otherwise no
+
+if we want the email validation
+.email()
+
+These all we can add , if we want to do the email validation.
+
+As soon as we type the characters , we start getting the errors, is it a good UI experience
+Its not an good experience
+user will feel you are yeling at them, and u are not giving time to correct as well.
+
+Let us Understand the Error Flow:
+
+Move away from from the field => When you type something and when you move away then it should throw an error
+||
+OnBlur => We should know when it is out of focus
+||
+handleBlur
+||
+touched==true

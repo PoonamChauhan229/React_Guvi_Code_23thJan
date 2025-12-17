@@ -8,14 +8,14 @@ const MovieList = () => {
   const Navigate = useNavigate();
   const [movieList, setMovieList] = useState([]);
 const getMovies=()=>{
-  fetch("https://63e4b3c5c04baebbcdaa0ebb.mockapi.io/movies")
+  fetch("https://6624dd2604457d4aaf9d281d.mockapi.io/movie")
       .then((data) => data.json())
       .then((res) => setMovieList(res));
 }
   useEffect(() => getMovies(), []);
 
   const deleteMovies=(id)=>{
-    fetch(`https://63e4b3c5c04baebbcdaa0ebb.mockapi.io/movies/${id}`,{method:"DELETE"})
+    fetch(`https://6624dd2604457d4aaf9d281d.mockapi.io/movie/${id}`,{method:"DELETE"})
       .then((data) => getMovies())
 }
 

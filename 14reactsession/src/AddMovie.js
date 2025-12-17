@@ -35,7 +35,7 @@ export const AddMovie = () => {
 
   const addMovie = (newMovie) => {
  
-    fetch("https://63e4b3c5c04baebbcdaa0ebb.mockapi.io/movies", {
+    fetch("https://6624dd2604457d4aaf9d281d.mockapi.io/movie", {
       method: "POST",
       body: JSON.stringify(newMovie),
       headers: {

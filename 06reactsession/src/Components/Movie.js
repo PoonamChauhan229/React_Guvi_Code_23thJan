@@ -28,6 +28,7 @@ const Movie = ({name,poster,rating,summary,id}) => {
           <h4 className="movieName">{name}
           <button onClick={()=>setShow(!show)}>{show?"🔽":"🔼"}</button>
           <button onClick={()=>{navigate(`/movies/${id}`)}}>ℹ</button>
+          <Link to={`/movies/${id}`}><button>ℹ</button></Link>
       <Counter/>
           </h4>
           <h4 className="movieRating" style={styles}>⭐{rating}</h4>

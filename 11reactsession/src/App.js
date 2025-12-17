@@ -8,64 +8,28 @@ import {
   Navigate,
   Route,
   Routes,
+  useNavigate,
 } from "react-router-dom";
 import NotFound from "./NotFound";
 import { MovieDetails } from "./MovieDetails";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import TicTacToe from "./TicTacToe";
+import Sigin from "./Sigin";
+import Dashboard from "./Dashboard";
+import Signup from "./Signup";
+import Product from "./Product";
+
 
 
 
 function App() {
-  const[mode,setMode]=useState('light')
-  const [movieList, setMovieList] = useState(allmovies);
-  console.log(movieList)
-
-  const theme = createTheme({
-    palette: {
-      mode: mode,
-    },
-  });
- 
-
 
   return (
-    <ThemeProvider theme={theme} >
-        <Paper elevation={4} style={{minHeight: "100vh",borderRadius:"0px"}} >
-          
-        <div>          
-            <Navbar mode={mode} setMode={setMode}/>
-            <Routes>
-              <Route exact path="/" element={<MovieList />} />
-              <Route
-                exact
-                path="/addmovie"
-                element={
-                  <AddMovie movieList={movieList} setMovieList={setMovieList} />
-                }
-              />
-              <Route exact path="/colorgame" element={<AddColor />} />
-              <Route
-                exact
-                path="/addcolor"
-                element={<Navigate replace to="/colorgame" />}
-              />
+   <>
+   <Product/>
+   </>
 
-              <Route exact path="/tictactoe" element={<TicTacToe />} />
-              <Route exact path="/movies/:id" element={<MovieDetails/>} />
-
-              <Route path="/404" element={<NotFound />} />
-              <Route path="*" element={<Navigate replace to="/404" />} />
-
-              
-            </Routes>
-        </div>
-        
-        </Paper>  
-        
-       
-    </ThemeProvider>
   );
 }
 

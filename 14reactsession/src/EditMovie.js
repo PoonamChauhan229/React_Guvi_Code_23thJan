@@ -10,7 +10,7 @@ export const EditMovie = () => {
 
 const [movie, setMovie] = useState(null);
 const getMovies=()=>{
-  fetch(`https://63e4b3c5c04baebbcdaa0ebb.mockapi.io/movies/${id}`)
+  fetch(`https://6624dd2604457d4aaf9d281d.mockapi.io/movie/${id}`)
       .then((data) => data.json())
       .then((res) => setMovie(res));
 }
@@ -38,7 +38,7 @@ const EditMovieForm=({movie})=>{
 
   const updateMovie=(id)=>{
     const movie = { name: movieName, poster, rating, summary,trailer };
-    fetch(`https://63e4b3c5c04baebbcdaa0ebb.mockapi.io/movies/${id}`,{
+    fetch(`https://6624dd2604457d4aaf9d281d.mockapi.io/movie/${id}`,{
       method:"PUT",
       body:JSON.stringify(movie),
       headers:{

@@ -16,7 +16,7 @@ export const MovieDetails = () => {
   //const movie = movieList[id];
   const [movie,setMovie]=useState({})
   const getMovie=()=>{
-    fetch(`https://63e4b3c5c04baebbcdaa0ebb.mockapi.io/movies/${id}`,{method:"GET",})
+    fetch(`https://6624dd2604457d4aaf9d281d.mockapi.io/movie/${id}`,{method:"GET",})
         .then((data) => data.json())
         .then((res) => setMovie(res));
   }

@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+Task 5 : React Custom Hooks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Problem Statement: 
 
-## Available Scripts
+The problem statement of this assignment is to create a custom hook in React that simplifies the process of fetching data from an API.
 
-In the project directory, you can run:
 
-### `npm start`
+Problem Description:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In this task, you will be introducing custom hooks to easy our commonly used tasks for example we generally do some fetch opetaaions to get data from backend api we will use a dummy api link to fetch data using fetch function of javascript in order to make it smoothely usable we will make a custom hook useFetch. Dummy api provided below in tips.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+custom hooks >> reusability
 
-### `npm test`
+Requirements:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Your custom hook should be named useFetch.
 
-### `npm run build`
+The useFetch hook should accept a URL parameter.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The hook should handle fetching data from the provided URL using fetch or any other preferred method.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It should return the following values:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+data: The fetched data (if any).
 
-### `npm run eject`
+loading: A boolean indicating whether the data is still loading.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+error: Any error that occurred during the fetch process.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Task 5 : React Custom Hooks
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Your hook should handle loading states and error states
+appropriately.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Utilize useState, useEffect, and useCallback hooks as necessary.
 
-### Code Splitting
+Create a simple React component that uses your useFetch hook to
+fetch data from an API and display it on the screen.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Style the component as desired using CSS or any preferred styling
+method.
 
-### Analyzing the Bundle Size
+Tips:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You can start by creating a new file for your custom hook, for
+example, useFetch.js.
 
-### Making a Progressive Web App
+Test your hook with different API endpoints to ensure its flexibility
+and reliability.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Consider error handling scenarios such as network errors or
+malformed data.
 
-### Advanced Configuration
+You can use a placeholder UI or loading spinner to indicate when
+data is being fetched.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Keep your component simple and focused on consuming the
+useFetch hook. You can expand on it later for more complex
+scenarios.
 
-### Deployment
+Example API Endpoint for photos and name 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+         https://api.escuelajs.co/api/v1/products

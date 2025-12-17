@@ -2,7 +2,6 @@ import Navbar from './Components/Navbar';
 import Movie from './Components/Movie';
 import AddColor from './Components/AddColor';
 import './App.css';
-import ClassProfile from './Components/ClassProfile';
 
  
   function App() {
@@ -83,7 +82,6 @@ import ClassProfile from './Components/ClassProfile';
       <>
        <Navbar/>
        <AddColor/>
-       <ClassProfile name={"Poonam"}/>
       <div className="App">      
         {
           movie.map((element,index)=>{
